@@ -1,0 +1,4 @@
+description: >
+  Executor with pdflatex.
+docker:
+  - image: 'schickling/latex:latest'
