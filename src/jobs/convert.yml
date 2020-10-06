@@ -10,5 +10,5 @@ parameters:
 
 steps:
   - checkout
-  - latex/convert:
+  - convert:
       file: <<parameters.file>>
