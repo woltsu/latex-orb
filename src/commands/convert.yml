@@ -7,6 +7,7 @@ parameters:
     description: "File to convert"
 
 steps:
+  - checkout
   - run:
       name: Test
       shell: /bin/bash
