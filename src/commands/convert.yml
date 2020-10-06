@@ -7,6 +7,6 @@ steps:
       shell: /bin/bash
       command: |
         mkdir /tmp/latex
-        touch /tmp/latex/test.txt
+        echo "TEST" > /tmp/latex/test.txt
   - store_artifacts:
       path: /tmp/latex
