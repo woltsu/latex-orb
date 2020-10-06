@@ -3,9 +3,28 @@
 [![CircleCI Build Status](https://circleci.com/gh/<organization>/<project-name>.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/<organization>/<project-name>) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/<namespace>/<orb-name>)](https://circleci.com/orbs/registry/orb/<namespace>/<orb-name>) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/<organization>/<project-name>/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 --->
-Compile .tex files into .pdf.
+CircleCI orb that compiles .tex files into .pdf and stores the results into artifacts.
 
 ## Usage
+View latest orb version from [here](https://circleci.com/developer/orbs/orb/woltsu/latex-orb).
+
+Example config:
+
+```yaml
+version: 2.1
+
+orbs:
+  latex: woltsu/latex-orb@x.y.z
+
+workflows:
+  build:
+    jobs:
+      - latex/compile:
+          file: ./path/to/file.tex
+```
+
+The compiled pdf can be found from the job
+artifacts.
 
 ## Resources
 
