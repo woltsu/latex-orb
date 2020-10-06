@@ -37,6 +37,7 @@ workflows:
     jobs:
       - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
+      - checkout
       - latex/convert:
           file: ./src/tests/input/hello.tex
       # If you accept building open source forks, protect your secrects behind a restricted context.
