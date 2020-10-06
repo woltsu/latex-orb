@@ -2,13 +2,10 @@ description: >
   Convert .tex file into pdf
 
 steps:
-  - docker/install-docker
-  - setup_remote_docker
   - run:
       name: Test
       shell: /bin/bash
       command: |
-        docker -v
-        docker run schickling/latex pdflatex
+        pdflatex /tests/input/hello.tex
   - store_artifacts:
       path: /source
