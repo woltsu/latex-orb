@@ -5,6 +5,8 @@
 --->
 Compile .tex files into .pdf.
 
+## Usage
+
 ## Resources
 
 [CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/<namespace>/<project-name>) - The official registry page of this orb for all versions, executors, commands, and jobs described.
