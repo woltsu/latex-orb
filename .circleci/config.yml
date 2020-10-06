@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  latex-orb: woltsu/latex-orb@<<pipeline.parameters.dev-orb-version>>
+  latex: woltsu/latex-orb@<<pipeline.parameters.dev-orb-version>>
   orb-tools: circleci/orb-tools@10.0
   bats: circleci/bats@1.0
   shellcheck: circleci/shellcheck@2.0
@@ -28,7 +28,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - latex-orb/greet
+      - latex/greet
 
 workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
