@@ -1,0 +1,12 @@
+description: >
+  Convert .tex file into pdf
+
+steps:
+  - run:
+      name: Test
+      shell: /bin/bash
+      command: |
+        mkdir /tmp/latex
+        touch /tmp/latex/test.txt
+  - store_artifacts:
+      path: /tmp/latex

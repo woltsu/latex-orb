@@ -1,0 +1,4 @@
+description: >
+  Executor with latex tools.
+docker:
+  - image: 'schickling/latex:latest'

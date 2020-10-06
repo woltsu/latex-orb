@@ -1,4 +1,0 @@
-description: >
-  Texlive executor.
-docker:
-  - image: 'thomasweise/docker-texlive-full:1.0'
