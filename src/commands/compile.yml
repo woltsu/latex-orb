@@ -1,14 +1,14 @@
 description: >
-  Convert tex file into pdf and output it into artifacts.
+  Compile tex file into pdf and output it into artifacts.
 
 parameters:
   file:
     type: string
-    description: "File to convert"
+    description: "File to compile"
 
 steps:
   - run:
-      name: Convert .tex file into .pdf
+      name: Compile .tex file into .pdf
       shell: /bin/bash
       command: |
         mkdir -p /tmp/source

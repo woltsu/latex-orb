@@ -26,7 +26,7 @@ jobs:
       - image: schickling/latex:latest
     steps:
       - checkout
-      - latex/convert:
+      - latex/compile:
           file: ./src/tests/input/hello.tex
 
 workflows:
@@ -37,7 +37,7 @@ workflows:
     jobs:
       - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
-      - latex/convert:
+      - latex/compile:
           file: ./src/tests/input/hello.tex
       # If you accept building open source forks, protect your secrects behind a restricted context.
       # A job containing restricted context (which holds your orb publishing credentials) may only be accessed by a user with proper permissions.
@@ -47,7 +47,7 @@ workflows:
           requires:
             - orb-tools/lint
             - orb-tools/pack
-            - latex/convert
+            - latex/compile
       # Publish development version(s) of the orb.
       - orb-tools/publish-dev:
           orb-name: woltsu/latex-orb

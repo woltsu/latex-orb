@@ -1,14 +1,14 @@
 description: >
-  Convert tex file into pdf and output it into artifacts.
+  Compile tex file into pdf and output it into artifacts.
 
 executor: latex
 
 parameters:
   file:
     type: string
-    description: "File to convert"
+    description: "File to compile"
 
 steps:
   - checkout
-  - convert:
+  - compile:
       file: <<parameters.file>>
