@@ -10,10 +10,5 @@ parameters:
 
 steps:
   - checkout
-  - run:
-      name: Convert .tex file into .pdf
-      shell: /bin/bash
-      command: |
-        cat <<parameters.file>>
   - latex/convert:
       file: <<parameters.file>>
