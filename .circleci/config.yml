@@ -37,9 +37,8 @@ workflows:
     jobs:
       - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
-      - checkout
-      - latex/convert:
-          file: ./src/tests/input/hello.tex
+      #- latex/convert:
+      #    file: ./src/tests/input/hello.tex
       # If you accept building open source forks, protect your secrects behind a restricted context.
       # A job containing restricted context (which holds your orb publishing credentials) may only be accessed by a user with proper permissions.
       # An open source user may begin a pipeline with a PR, and once the pipeline is approved by an authorized user at this point, the pipeline will continue with the proper context permissions.
@@ -48,7 +47,7 @@ workflows:
           requires:
             - orb-tools/lint
             - orb-tools/pack
-            - latex/convert
+            # - latex/convert
       # Publish development version(s) of the orb.
       - orb-tools/publish-dev:
           orb-name: woltsu/latex-orb
