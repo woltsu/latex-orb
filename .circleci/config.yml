@@ -29,6 +29,7 @@ jobs:
     steps:
       - checkout
       - latex/convert
+          file: ./src/tests/input/hello.tex
 
 workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.

@@ -1,11 +1,16 @@
 description: >
   Convert .tex file into pdf
 
+parameters:
+  file:
+    type: string
+    description: "File to convert"
+
 steps:
   - run:
       name: Test
       shell: /bin/bash
       command: |
-        pdflatex /tests/input/hello.tex
+        pdflatex <<parameters.file>>
   - store_artifacts:
       path: /source
