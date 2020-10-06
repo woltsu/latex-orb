@@ -13,4 +13,4 @@ steps:
       command: |
         pdflatex <<parameters.file>>
   - store_artifacts:
-      path: /source
+      path: /
