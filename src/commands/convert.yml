@@ -1,8 +1,6 @@
 description: >
   Convert .tex file into pdf
 
-executor: latex
-
 steps:
   - run:
       name: Test
