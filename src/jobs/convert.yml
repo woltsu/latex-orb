@@ -8,5 +8,6 @@ parameters:
     type: string
     description: "File to convert"
 steps:
+  - checkout
   - convert:
       file: << parameters.file >>
