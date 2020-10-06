@@ -6,7 +6,6 @@ steps:
       name: Test
       shell: /bin/bash
       command: |
-        mkdir /tmp/latex
-        echo "TEST" > /tmp/latex/test.txt
+        pdflatex ../tests/input/hello.tex
   - store_artifacts:
-      path: /tmp/latex
+      path: /source
