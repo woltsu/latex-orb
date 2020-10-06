@@ -11,6 +11,7 @@ steps:
       name: Test
       shell: /bin/bash
       command: |
-        pdflatex <<parameters.file>>
+        mkdir -p /tmp/source
+        pdflatex -output-directory /tmp/source <<parameters.file>>
   - store_artifacts:
-      path: /
+      path: /tmp/source
