@@ -55,10 +55,10 @@ workflows:
       #      - bats/run
       #      - shellcheck/check
       ## Publish development version(s) of the orb.
-      #- orb-tools/publish-dev:
-      #    orb-name: woltsu/latex-orb
-      #    context: latex-orb # A restricted context containing your private publishing credentials. Will only execute if approved by an authorized user.
-      #    requires: [hold-for-dev-publish]
+      - orb-tools/publish-dev:
+          orb-name: woltsu/latex-orb
+          context: latex-orb # A restricted context containing your private publishing credentials. Will only execute if approved by an authorized user.
+          requires: [hold-for-dev-publish]
       # Trigger an integration workflow to test the
       # dev:${CIRCLE_SHA1:0:7} version of your orb
       - orb-tools/trigger-integration-tests-workflow:
