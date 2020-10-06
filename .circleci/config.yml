@@ -28,7 +28,7 @@ jobs:
       - image: schickling/latex:latest
     steps:
       - checkout
-      - latex/convert
+      - latex/convert:
           file: ./src/tests/input/hello.tex
 
 workflows:
