@@ -1,13 +1,12 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Convert a tex file into pdf. Outputs result to artifacts.
+
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    latex-orb: woltsu/latex-orb@x.y.z
   workflows:
-    use-my-orb:
+    convert:
       jobs:
-        - <orb-name>/<job-name>
+        - latex-orb/convert:
+            file: /path/to/file.tex

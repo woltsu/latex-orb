@@ -1,0 +1,12 @@
+description: >
+  Convert tex file into pdf and output it into artifacts.
+
+executor: latex
+
+parameters:
+  file:
+    type: string
+    description: "File to convert"
+steps:
+  - convert:
+      file: << parameters.file >>
