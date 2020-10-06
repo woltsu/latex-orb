@@ -8,7 +8,7 @@ parameters:
 
 steps:
   - run:
-      name: Test
+      name: Convert .tex file into .pdf
       shell: /bin/bash
       command: |
         mkdir -p /tmp/source
