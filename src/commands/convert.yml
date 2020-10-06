@@ -3,6 +3,8 @@ description: >
 
 steps:
   - docker/install-docker
+  - docker -v
+  - docker run schickling/latex pdflatex
   #- run:
   #    name: Test
   #    shell: /bin/bash
